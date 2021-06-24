@@ -1,12 +1,15 @@
 <script>
   import logo from './assets/svelte.png'
   import Counter from './lib/Counter.svelte'
+  import Greeter from './lib/Greeter.svelte'
 </script>
 
 <main>
   <img src={logo} alt="Svelte Logo" />
-  <h1>Merhaba!</h1>
-
+  
+  <div>
+    <Greeter />
+  </div>
   <Counter />
 
   <p>
@@ -17,6 +20,11 @@
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
     the officially supported framework, also powered by Vite!
+  </p>
+
+  <p>
+    You can also check files of <a href="https://github.com/ErcouldnT/Svelte-Server-Starter">this project</a> at my
+    Github.
   </p>
 </main>
 
@@ -37,16 +45,6 @@
     width: 16rem;
   }
 
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
   p {
     max-width: 14rem;
     margin: 1rem auto;
@@ -59,10 +57,6 @@
   }
 
   @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
     p {
       max-width: none;
     }

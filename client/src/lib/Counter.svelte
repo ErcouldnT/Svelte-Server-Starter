@@ -3,10 +3,18 @@
   const increment = () => {
     count += 1
   }
+  const reset = () => {
+    count = 0
+  }
+  console.log("I AM ALIVE!")
 </script>
 
-<button on:click={increment}>
+<button on:click={increment} style="font-weight: bold">
   {count <= 1 ? "Click" : "Clicks"}: {count}
+</button>
+
+<button on:click={reset}>
+  Reset
 </button>
 
 <style>
